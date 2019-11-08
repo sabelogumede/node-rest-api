@@ -12,12 +12,12 @@ const db = mongoose.connection;
 db.on("error", error => console.error(error));
 db.once("open", () => console.log("Connected to Database"));
 
-// get the app to eccept json objects
-app.use(express.json);
+// tell the app to except json objects
+app.use(express.json());
 
 // import routes
-const subscribersRoutes = require("./routes/subscribers");
-app.use("/subscribers", subscribersRoutes);
+const subscribersRouter = require("./routes/subscribers");
+app.use("/subscribers", subscribersRouter);
 
 // server port
 app.listen(3000, () => console.log("Server started"));
