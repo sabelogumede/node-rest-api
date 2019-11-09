@@ -1,1 +1,28 @@
 GET http://localhost:3000/subscribers
+
+###
+
+GET http://localhost:3000/subscribers/5dc574d16af3ae294c29a312
+
+###
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Sabelo Gumede",
+    "subscribedToChannel": "Web Dev Simplified"
+}
+
+###
+
+DELETE http://localhost:3000/subscribers/5dc573cd6af3ae294c29a310
+
+###
+
+PATCH  http://localhost:3000/subscribers/5dc574d16af3ae294c29a312
+Content-Type: application/json
+
+{
+    "name": "New Name" 
+}
